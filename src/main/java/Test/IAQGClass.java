@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -249,7 +249,7 @@ public class IAQGClass {
 	   if (string != null)
 	      value = new Integer(string);
 	   return value;
-	}
+	}	
 	
 //main	
 	public static void main(String[] args) {
