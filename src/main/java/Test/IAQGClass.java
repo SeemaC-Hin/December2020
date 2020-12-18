@@ -31,6 +31,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -268,6 +269,10 @@ public class IAQGClass {
 			
 			int intFlag,srNo;
 			srNo = objTestIAQG.getInteger("srNo");
+			
+			ChromeOptions chromeOptions= new ChromeOptions();
+			chromeOptions.setBinary("C:\\Users\\DongareS\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+			
 			System.setProperty("webdriver.chrome.driver",prop.getProperty("strBrowserDriver"));
 			WebDriver driver;
 		
@@ -349,7 +354,8 @@ public class IAQGClass {
 			r1.createCell(14).setCellValue("Remark");		
 		
 			//login code
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(chromeOptions);
+			
 			Actions action = new Actions(driver);
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 			driver.get("https://www.iaqg.org/oasis/login");		
