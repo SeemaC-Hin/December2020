@@ -256,7 +256,7 @@ public class IAQGClass {
 		
 			UIManager.put("OptionPane.minimumSize",new Dimension(300, 200));
 		    UIManager.put("OptionPane.messageFont", new Font("Arial", Font.BOLD, 21));
-			JOptionPane.showMessageDialog(null,"Run started","Info",JOptionPane.INFORMATION_MESSAGE);
+			//JOptionPane.showMessageDialog(null,"Run started","Info",JOptionPane.INFORMATION_MESSAGE);
 
 			IAQGClass objTestIAQG = new IAQGClass();	
 			objTestIAQG.propClass = objTestIAQG.readPropertyFile(objTestIAQG.strPropertyFilePath);
@@ -558,10 +558,10 @@ public class IAQGClass {
 						System.out.println(e);
 					//driver.close();
 					}
-					if (i==objTestIAQG.getInteger("endComapanyNo"))
-					{
-						JOptionPane.showMessageDialog(null,"Ended with records entered","Info",JOptionPane.INFORMATION_MESSAGE);
-					}
+					//if (i==objTestIAQG.getInteger("endComapanyNo"))
+					//{
+						//JOptionPane.showMessageDialog(null,"Ended with records entered","Info",JOptionPane.INFORMATION_MESSAGE);
+					//}
 				}
 				
 			
